@@ -1,0 +1,23 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>
+@prefix foobar: <http://foobar.com/>
+
+foobar:UnterstuetzerKategorien a skos:ConceptScheme;
+  rdfs:label "Unterstützer Kategorien"@de;
+  rdfs:label "Supporter Categories"@de;
+  skos:hasTopConcept foobar:Arbeit;
+  skos:hasTopConcept foobar:Engagement;
+  .
+
+foobar:Arbeit a skos:Concept;
+  rdfs:label "Arbeit"@de;
+  rdfs:label "Work"@en;
+  skos:member foobar:UnterstuetzerKategorien;
+  skos:narrower foobar:Anstellung;
+  .
+
+foobar:Anstellung a skos:Concept;
+  rdfs:label "Anstellung"@de;
+  rdfs:label "Job"@en;
+  skos:member foobar:UnterstuetzerKategorien;
+  skos:broader foobar:Arbeit;
+  .

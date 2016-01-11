@@ -1,0 +1,24 @@
+@prefix ontology: <http://foobar.com/def/>
+@prefix category: <http://foobar.com/id/categories/>
+@prefix project: <http://foobar.com/id/projects/>
+
+# Ontology
+
+ontology:Category a rdfs:Class .
+ontology:Project a rdfs:Class .
+ontology:hasCategory a rdf:Property .
+
+# Categories
+
+category:arbeit-und-ausbildung a Category .
+category:unterstützung a Category .
+
+# Projects
+
+project:jobs4refugees a Project;
+  rdfs:label "Jobs for Refugees"@en;
+  rdfs:label "Arbeit für Fluchtlinge"@de;
+  rdfs:comment "We help refugees find work by giving them language training";
+  ontology:hasCategory category:arbeit-und-ausbildung;
+  ontology:hasCategory category:unterstützung;
+  .
