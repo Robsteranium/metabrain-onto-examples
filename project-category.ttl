@@ -1,15 +1,20 @@
-@prefix ontology: <http://foobar.com/def/>
-@prefix category: <http://foobar.com/id/categories/>
-@prefix project: <http://foobar.com/id/projects/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ontology: <http://foobar.com/def/> .
+@prefix category: <http://foobar.com/id/categories/> .
+@prefix project: <http://foobar.com/id/projects/> .
 
 # Ontology
-
 ontology:Category a rdfs:Class .
+
 ontology:Project a rdfs:Class .
-ontology:hasCategory a rdf:Property .
+
+ontology:hasCategory a rdf:Property;
+  rdfs:domain ontology:Project;
+  rdfs:range ontology:Category;
+  .
 
 # Categories
-
 category:arbeit-und-ausbildung a Category .
 category:unterstützung a Category .
 

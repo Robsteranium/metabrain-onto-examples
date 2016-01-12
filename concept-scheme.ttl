@@ -1,5 +1,5 @@
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>
-@prefix foobar: <http://foobar.com/>
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix foobar: <http://foobar.com/> .
 
 foobar:UnterstuetzerKategorien a skos:ConceptScheme;
   rdfs:label "Unterstützer Kategorien"@de;
