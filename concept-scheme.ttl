@@ -3,7 +3,7 @@
 
 foobar:UnterstuetzerKategorien a skos:ConceptScheme;
   rdfs:label "Unterstützer Kategorien"@de;
-  rdfs:label "Supporter Categories"@de;
+  rdfs:label "Supporter Categories"@en;
   skos:hasTopConcept foobar:Arbeit;
   skos:hasTopConcept foobar:Engagement;
   .
